@@ -1,4 +1,13 @@
-<div class="project">
-	<%= p[:title]%>
-	<%= p[:body]%>
+<div class="project" style="background-image: url(/assets/<%= p[:name]%>-image.jpg); ">
+
+	<div class="project-company">
+		<%= p[:company]%>
+	</div>
+
+	<div class="project-title">
+		<%= p[:title]%>
+	</div>
+
+	<%= link_to "View Project", '/'+project_type_string(p[:type])+'/'+p[:name], :class => 'button-white' %>
+
 </div>

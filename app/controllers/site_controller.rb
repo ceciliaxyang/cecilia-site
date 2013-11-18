@@ -14,7 +14,7 @@ class SiteController < ApplicationController
 	end
 
 	def project_page
-		@projects = find_project_by_title(params[:title])
+		@projects = find_project_by_title(params[:name])
 	end
 
 
@@ -30,16 +30,34 @@ class SiteController < ApplicationController
 
 	def projects
 		[
-		{:title => "OKL Search", 
-		 :body => "Text about OKL Search",
+		{:name => "okl-search",
+		 :title => "Search & Faceted Filters",
+		 :company => "One Kings Lane",
+		 :description => "Search, Null Results, and Faceted Filters",
+		 :role => "Interaction Design",
+		 :year => "2013",
+		 :body => "Any description here",
 		 :type => WORK_PROJECT},
-		{:title => "Jawbone Mobile Site", 
+		{:name => "okl-ipad-app",
+		 :title => "iPad App (v1)",
+		 :company => "One Kings Lane",
+		 :description => "Description here",
+		 :role => "Interaction Design",
+		 :year => "2013",
+		 :body => "Any description here",
+		 :type => WORK_PROJECT},
+		{:name  => "jawbone-mobile", 
+		 :title => "Mobile Site",
+		 :company => "Jawbone",
 		 :body => "Text about Jawbone Mobile Site",
 		 :type => WORK_PROJECT},
-		{:title => "Name that Cloud", 
-		 :body => "Text about Cloud Project",
-		 :type => LABS_PROJECT},
-		{:title => "Cloud", 
+		{:name  => "jawbone-up-ipad-app", 
+		 :title => "Point-of-Sale iPad App",
+		 :company => "Jawbone",
+		 :body => "Text",
+		 :type => WORK_PROJECT},
+		{:name  => "name-that-cloud",
+		 :title => "Search on One Kings Lane", 
 		 :body => "Text about Cloud Project",
 		 :type => LABS_PROJECT}
 	]
@@ -47,7 +65,7 @@ class SiteController < ApplicationController
 
 	def find_project_by_title(title)
 		projects.each do |p|
-			if p[:title] == title
+			if p[:name] == title
 				return p
 			end
 		end
@@ -62,6 +80,18 @@ class SiteController < ApplicationController
 		end
 		return results
 	end
+
+	def project_type_string(value)
+		if value = WORK_PROJECT
+			return 'work'
+		end
+		if value = LABS_PROJECT
+			return 'labs'
+		end
+	end
+
+	helper_method :project_type_string
+
 
 end
 

@@ -4,6 +4,27 @@
 
 
 .project {
-	background-color: red;
-	height: 300px;
+	min-height: 600px;
+	background-size: cover;
+	background-position: center; 
+	text-align: center;
+
+	& .project-company {
+		font-family: sans-serif;
+		color: #FFF;
+		text-transform: uppercase;
+		padding-top: 200px;
+	}
+
+	& .project-title {
+		font-size: 60px;
+		font-family: serif;
+		color: #FFF;
+		padding-top: 30px;
+		padding-bottom: 80px;
+
+	}
+
 }
+
+

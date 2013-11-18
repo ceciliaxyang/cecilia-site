@@ -61,10 +61,10 @@ Cysite::Application.routes.draw do
   match '/about', :controller => 'site', :action => 'about'
 
   match '/work', :controller => 'site', :action => 'work'
-  match '/work/:title', :controller => 'site', :action => 'project_page'
+  match '/work/:name', :controller => 'site', :action => 'project_page'
 
   match '/labs', :controller => 'site', :action => 'labs'
-  match '/labs/:title', :controller => 'site', :action => 'project_page'
+  match '/labs/:name', :controller => 'site', :action => 'project_page'
 
 
 

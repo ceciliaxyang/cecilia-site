@@ -37,7 +37,9 @@ class SiteController < ApplicationController
 		 :role => "Interaction Design",
 		 :year => "2013",
 		 :body => "Any description here",
-		 :type => WORK_PROJECT},
+		 :type => WORK_PROJECT,
+		 :url => "/projects/okl_search"},
+
 
 		{:name => "okl-categories",
 		 :title => "Category-based Shopping",
@@ -46,7 +48,9 @@ class SiteController < ApplicationController
 		 :role => "Interaction Design",
 		 :year => "2013",
 		 :body => "Any description here",
-		 :type => WORK_PROJECT},
+		 :type => WORK_PROJECT,
+		 :url => "/projects/project_okl_categories"},
+
 
 		{:name => "okl-ipad-app",
 		 :title => "iPad App 1.0",
@@ -55,24 +59,31 @@ class SiteController < ApplicationController
 		 :role => "Interaction Design",
 		 :year => "2013",
 		 :body => "Any description here",
-		 :type => WORK_PROJECT},
+		 :type => WORK_PROJECT,
+		 :url => "/projects/project_okl_ipad_app"},
+
 
 		{:name  => "jawbone-mobile", 
 		 :title => "Mobile Site",
 		 :company => "Jawbone",
 		 :body => "Text about Jawbone Mobile Site",
-		 :type => WORK_PROJECT},
+		 :type => WORK_PROJECT,
+		 :url => "/projects/project_jawbone_mobile"},
 
-		{:name  => "jawbone-up-ipad-app", 
+		{:name  => "jawbone-ipad-app", 
 		 :title => "Point-of-Sale iPad App",
 		 :company => "Jawbone",
 		 :body => "Text",
-		 :type => WORK_PROJECT},
+		 :type => WORK_PROJECT,
+		 :url => "/projects/project_jawbone_ipad-app"},
+
 
 		{:name  => "name-that-cloud",
 		 :title => "Search on One Kings Lane", 
 		 :body => "Text about Cloud Project",
-		 :type => LABS_PROJECT}
+		 :type => LABS_PROJECT,		 
+		 :url => "/projects/project_name_that_cloud"},
+
 	]
 	end
 

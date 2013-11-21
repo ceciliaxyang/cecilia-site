@@ -1,4 +1,33 @@
 Project page
 
+Attributes about the project
 <%= @projects[:name] %>
 <%= @projects[:body] %>
+
+
+<% unless @projects[:url].blank? %>
+	<%= render @projects[:url] %>
+<% end %>
+
+<!-- render(url, {:project => p } )
+
+{}
+
+:key => variable
+
+
+p = { "foo" => bar}
+p["foo"] = bar
+
+
+
+
+a = [a, b, c, d]
+a[1] 
+a[:foo]\
+foo bar
+apple banana
+bam kapab
+
+p["appple"] => banana
+ -->
